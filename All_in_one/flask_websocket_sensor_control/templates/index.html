@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flask-WebSocket Sensor Control</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script> 
+  <script src="iot_with_flask.js"> </script>
+</head>
+<body>
+
+<p>[<a href="/">home</a>]</p>
+
+<hr>
+<h2>Control LED1</h2>
+Control led1 
+<input type="checkbox" id="tLed" onclick="do_led_chkbox_onclick(this, document.getElementById('tLedLabel'))"><!-- led1 제어를 위한 체크박스와 클릭 이벤트 핸들러 -->
+<div id="tLedLabel"> GPIO2 led turned off</div><!-- LED 상태를 표시하는 라벨 -->
+<hr>
+
+<h2>Get Measured data through Websocket</h2>  
+<strong> Number of Measurements:  </strong><br/>   
+<input type="text" id="measurementCnt"/>     <br/>   <!-- 측정 횟수를 입력받는 텍스트 박스 -->
+<button onclick="measurement_start()">Start</button><!-- 측정을 시작하는 버튼과 클릭 이벤트 핸들러 -->
+<p><b>Log:</b></p>
+<p></p><pre id="log"></pre><p></p> <!-- 측정 로그를 표시하는 영역 -->
+<hr> 
+</body>
+</html>

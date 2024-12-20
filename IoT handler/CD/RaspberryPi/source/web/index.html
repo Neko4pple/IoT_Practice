@@ -1,0 +1,168 @@
+<html>
+	<head>
+		<title>IoT SMART SERVER</title>
+	</head>
+	<body>
+<style>
+	img{
+		transition : transform 100ms ease-in-out, opacity 100ms ease-in-out;
+	}
+</style>		
+
+		<script src="iot.js"></script>
+		
+		<center><h1>IoT SMART SERVER</h></center>
+		<br><br>
+
+		<center><table border="0" cellpadding="25%" width ="100%">
+			<tr>
+				<td><center>
+					<h3>LED</h><br><br>
+					<img src="img/led_off.png" name="LED"><br><br>
+					<input type="button" value="ON" id="LED_ON" onclick="LEDON();">
+					<input type="button" value="OFF" id="LED_OFF" onclick="LEDOFF();">
+				</center></td>
+
+				<td><center>
+					<h3>DC Motor</h><br><br>
+					<img src="img/dcm_off.png" name="DCM"><br><br>
+					<input type="button" value="ON" id="DCM_ON" onclick="DCMON();">
+               <input type="button" value="OFF" id="DCM_OFF" onclick="DCMOFF();">
+            </center></td>
+
+				<td><center>
+               <h3>Step Motor</h><br><br>
+               <img src="img/stm_off.png" name="STM"><br><br>
+               <input type="button" value="Active" id="STM_ON" onclick="STMON();">
+            </center></td>
+
+			</tr>
+			<tr>
+
+            <td><center>
+					<h3>PIR</h><br><br>
+               <img src="img/pir_off.png" name="PIR"><br><br>
+            </center></td>
+
+            <td><center>
+               <h3>UltraSonic</h><br><br>
+					<div style="width:128px; height:150px;">
+               <img src="img/ultrasonic3.png" name="US"><br><br>
+					</div>
+               <input type="button" id="US_val" value="Undetected" style="border:none;">
+            </center></td>
+
+            <td><center>
+               <h3>Temperature</h><br><br>
+					<div style="postion:relative; background:url(img/temp.png) no-repeat; width:128px;">
+               <img src="img/temp_ov.png" name="TEMPOV" style="opacity:0.5"><br><br>
+               <input type="button" id="TEMP_val" value="Undetected" style="border:none;">
+            </center></td>
+
+         </tr>
+         <tr>
+
+            <td><center>
+               <h3>Light Sensor</h><br><br>
+               <img src="img/light_off.png" name="LIGHT"><br><br>
+            </center></td>
+
+            <td><center>
+               <h3>Noise Sensor</h><br><br>
+               <img src="img/sound.png" name="SOUND"><br><br>
+               <input type="button" id="SOUND_val" value="Undetected" style="border:none;">
+            </center></td>
+
+            <td><center>
+               <h3>Humidity</h><br><br>
+					<div style="postion:relative; background:url(img/humi.png) no-repeat; width:128px;">
+					<img src="img/humi_ov.png" name="HUMIOV" style="position:relative; z-index:5; opacity:0.5;"></div><br><br>
+               <input type="button" id="HUMI_val" value="Undetected" style="border:none;">
+            </center></td>
+
+         </tr>
+			<tr>
+
+            <td><center>
+               <h3>Variable Res.</h><br><br>
+					<img src="img/vr_meter.png"><br>
+               <img src="img/vr.png" name="VR" style="transform : rotate(-90deg);"><br><br>
+               <input type="button" id="VR_val" value="Undetected" style="border:none;">
+            </center></td>
+
+            <td><center>
+               <h3>Switch</h><br><br>
+               <img src="img/sw_off.png" name="SW"><br><br>
+            </center></td>
+
+            <td><center>
+               <h3>Touch Sensor</h><br><br>
+               <img src="img/touch_off.png" name="TOUCH"><br><br>
+            </center></td>
+
+         </tr>
+			<tr>
+
+            <td><center>
+               <h3>Photo Diode</h><br><br>
+               <img src="img/pd_off.png" name="PD"><br><br>
+            </center></td>
+
+            <td><center>
+               <h3>Bump Sensor</h><br><br>
+               <img src="img/bump_off.png" name="BUMP"><br><br>
+            </center></td>
+
+            <td><center>
+               <h3>IR Obstacle Sensor</h><br><br>
+               <img src="img/iro_off.png" name="IRO"><br><br>
+            </center></td>
+
+         </tr>
+			 <tr>
+				<td><center>
+               <h3>Laser</h><br><br>
+               <img src="img/laser_off.png" name="LASER"><br><br>
+               <input type="button" value="ON" id="LASER_ON" onclick="LASERON();">
+               <input type="button" value="OFF" id="LASER_OFF" onclick="LASEROFF();">
+            </center></td>
+
+				<td><center>
+               <h3>Mercury Sensor</h><br><br>
+               <img src="img/mercury_off.png" name="MERC"><br><br>
+            </center></td>
+
+            <td><center>
+               <h3>Tilt Sensor</h><br><br>
+               <img src="img/tilt_off.png" name="TILT"><br><br>
+            </center></td>
+
+         </tr>
+          <tr>
+            <td><center>
+               <h3>Flame Sensor</h><br><br>
+               <img src="img/flame_off.png" name="FLAME"><br><br>
+            </center></td>
+
+            <td><center>
+               <h3>Reed Sensor</h><br><br>
+               <img src="img/reed_off.png" name="REED"><br><br>
+            </center></td>
+
+				<td><center>
+               <h3>Buzzer</h><br><br>
+               <img src="img/buzzer_off.png" name="BUZZER"><br><br>
+               <input type="button" value="ON" id="BUZZER_ON" onclick="BUZZERON();">
+               <input type="button" value="OFF" id="BUZZER_OFF" onclick="BUZZEROFF();">
+            </center></td>
+
+
+         </tr>
+
+
+
+
+		</table></center>
+
+	</body>
+</html>

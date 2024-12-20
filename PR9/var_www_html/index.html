@@ -1,0 +1,35 @@
+<html>
+
+   <head>
+      <title>HUFS IoT Edge</title>
+   </head>
+
+   <body>
+      <script src="iot.js"></script>
+      <center><h1>HUFS IoT Edge</h></center>
+      <br><br>
+      <center><table border="0" cellpadding="25%" width ="100%">
+
+         <tr>
+            <td><center>
+               <h3 id="LED_TITLE">LED</h3><br><br>
+               <img src="img/led_off.png" name="LED" id="LED_IMG_ID"><br><br>               
+               <input type="button" value="ON" id="LED_ON" onclick="LEDON();">
+               <input type="button" value="OFF" id="LED_OFF" onclick="LEDOFF();">
+              
+               <br>
+
+               <button id="LED_ON2" onclick="LEDON();"> On </button>
+               <button id="LED_OFF2" onclick="LEDOFF();"> Off </button>
+            </center></td>
+
+            <td><center>
+               <h3>Light Sensor</h><br><br>
+               <img src="img/light_off.png" name="LIGHT"><br><br>
+            </center></td>
+         </tr>
+      </table></center>
+
+   </body>
+   
+</html>

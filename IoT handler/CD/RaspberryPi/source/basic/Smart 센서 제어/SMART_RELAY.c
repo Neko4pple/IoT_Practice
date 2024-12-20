@@ -1,0 +1,11 @@
+#include <wiringPi.h>
+#define PIN 16
+
+int main(void){
+        if(wiringPiSetup() == -1) return 1;
+        pinMode(PIN,OUTPUT);
+
+        digitalWrite(PIN,HIGH);
+	delay(1000);
+	digitalWrite(PIN,LOW);
+}

@@ -1,0 +1,108 @@
+<html>
+	<head>
+		<title>IoT SMART SERVER Addon</title>
+	</head>
+	<body>
+<style>
+	img{
+		transition : transform 100ms ease-in-out, opacity 100ms ease-in-out;
+	}
+</style>		
+
+		<script src="iot_addon.js"></script>
+		
+		<center><h1>IoT SMART SERVER Addon</h></center>
+		<br><br>
+
+		<center><table border="0" cellpadding="25%" width ="100%">
+			<tr>
+				<td><center>
+					<h3>RGB LED</h><br><br>
+						<div>
+		 					<img src="img/RGB_off.png" name="RED" style="max-width:43px">
+							<input type="button" value="ON" id="RED_ON" onclick="REDON();">
+               		<input type="button" value="OFF" id="RED_OFF" onclick="REDOFF();">
+
+						</div>
+						<div>
+                     <img src="img/RGB_off.png" name="GREEN" style="max-width:43px">
+                     <input type="button" value="ON" id="GREEN_ON" onclick="GREENON();">
+                     <input type="button" value="OFF" id="GREEN_OFF" onclick="GREENOFF();">
+                  </div>
+					<div>
+                     <img src="img/RGB_off.png" name="BLUE" style="max-width:43px">
+                     <input type="button" value="ON" id="BLUE_ON" onclick="BLUEON();">
+                     <input type="button" value="OFF" id="BLUE_OFF" onclick="BLUEOFF();">
+
+                  </div>
+
+
+				</center></td>
+
+				<td><center>
+					<h3>Relay</h><br><br>
+					<img src="img/relay_off.png" name="RELAY"><br><br>
+					<input type="button" value="ON" id="RELAY_ON" onclick="RELAYON();">
+               <input type="button" value="OFF" id="REALY_OFF" onclick="RELAYOFF();">
+
+
+            </center></td>
+
+				<td><center>
+               <h3>IR Tracking</h><br><br>
+               <img src="img/irt_off.png" name="IRT"><br><br>
+            </center></td>
+
+			</tr>
+			<tr>
+
+            <td><center>
+					<h3>Limit Switch</h><br><br>
+               <img src="img/limit_off.png" name="LIMIT"><br><br>
+            </center></td>
+
+            <td><center>
+               <h3>Knock Sensor</h><br><br>
+               <img src="img/knock_off.png" name="KNOCK"><br><br>
+            </center></td>
+
+            <td><center>
+               <h3>Dust Sensor</h><br><br>
+               <img src="img/dust.png" name="DUST"><br><br>
+               <input type="button" id="DUST_val" value="Undetected" style="border:none;">
+            </center></td>
+
+         </tr>
+         <tr>
+
+            <td><center>
+               <h3>Soil Moisture</h><br><br>
+               <img src="img/soil.png" name="SM"><br><br>
+               <input type="button" id="SM_val" value="Undetected" style="border:none;">
+            </center></td>
+
+            <td><center>
+               <h3>Gas Sensor</h><br><br>
+               <img src="img/gas.png" name="GAS"><br><br>
+               <input type="button" id="GAS_val" value="Undetected" style="border:none;">
+            </center></td>
+
+            <td><center>
+               <h3>Thermistor</h><br><br>
+					<img src="img/therm.png" name="THERM" style="opacity:0.5;"><br><br>
+               <input type="button" id="THERM_val" value="Undetected" style="border:none;">
+            </center></td>
+
+         </tr>
+			<tr>
+
+            <td><center>
+               <h3>Analog Temp.</h><br><br>
+               <img src="img/LM35.png" name="AT"><br><br>
+               <input type="button" id="AT_val" value="Undetected" style="border:none;">
+            </center></td>
+         </tr>
+		</table></center>
+
+	</body>
+</html>

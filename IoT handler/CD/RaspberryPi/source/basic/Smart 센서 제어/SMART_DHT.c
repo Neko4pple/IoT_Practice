@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <stdint.h>
+#include <wiringPi.h>
+
+#define MAX_TIME 100
+#define PIN 25
+
+int val[5] = {0,0,0,0,0};
+
+int main(void){
+        uint8_t lststate = 1;
+        uint8_t cnt = 0;
+        uint8_t j=0,i;
+	float f_temp;
+
+        if(wiringPiSetup() == -1) return 1;
+
+        pinMode(PIN,OUTPUT);
+
+        digitalWrite(PIN,LOW);
+        delay(18);
+        digitalWrite(PIN,HIGH);
+        delayMicroseconds(40);
+        pinMode(PIN,INPUT);
+
+        for(i=0;i<MAX_TIME;i++){
+                cnt=0;
+
+                while(digitalRead(PIN) == lststate){
+                        cnt++;
+                        delayMicroseconds(1);
+                        if(cnt == 255) break;
+                }
+
+                lststate = digitalRead(PIN);
+
+                if(cnt == 255) break;
+
+                if((i>=4) && (i%2==0)){
+                        val[j/8]<<=1;
+                        if(cnt>16) val[j/8]|=1;
+                        j++;
+                }
+        }
+        f_temp=val[2]*9./5.+32;
+
+        if((j>=40) && (val[4] == ((val[0]+val[1]+val[2]+val[3]) & 0xFF))){
+             printf("%d.%d *C (%.1f *F)  /  %d.%d%%\n",val[2],val[3],f_temp,val[0],val[1]);
+        }else 
+	     printf("-1\n");
+}

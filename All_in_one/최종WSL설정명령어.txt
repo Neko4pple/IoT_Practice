@@ -1,0 +1,80 @@
+sudo vi /etc/apt/sources.list ==> legacy download link 수정방법.
+
+sudo apt-get install samba  ==> 삼바 설치.
+
+sudo cp -rf web/. /var/www/html  ==> 경고문 없이 web/. 디렉토리의 항목을 /var/www/html로 복사.
+
+gcc -o <ExE Filename> <Codename.c> -lwiringPi -lwiringPiDev
+chown root <ExEname>
+chmod +s <ExEname>
+sudo ./<Filename>
+sudo rm -rf <Dirname>
+
+ls -l  ==> list 형식으로 Directory 구조(권한)를 보여줌
+ls -a ==> 숨김 파일도 전부 보여줌
+ls -t ==> timestamp 순서로 보여줌.
+ls -r ==> 역순정렬 <rt 같이, 특정 정렬 순서를 "역순으로 한다"는 접두명령어로 사용 가능>
+
+history  ==>  여태까지 쳤던 명령어 다 보여줌.
+
+sudo ./<Daemonname> &  ==> Excutable file인 Daemon을 Background에서 실행시킴.
+ps -elf | grep Daemon  ==> grep 뒤의 문자열이 포함된 "실행중인 파일"을 목록화 해서 보여줌.
+sudo kill -9 <PID>  ==> -elf로 찾은 PID에 해당하는 프로세스를 소리소문없이 죽여줌.
+
+wget <URL> ==> URL 내의 Data를 Console 상에 받아옴.
+
+chmod 	 +w  	==> Write 권한 제공
+	     +r    	==> Read 권한 제공
+	     +s   	==> setUID, setGID 권한 제공. (root 권한 제공에 씀)
+
+source /~~/~~/~~ ==> 쉘 스크립트 파일을 현재 쉘 세션에서 실행하고자 할 때 사용
+
+python --version ==> python 버전 확인
+
+which pip ==> pip 버전 확인
+
+pip install ~~  ==> ~~을 설치.(python installer)
+
+REST (REpresentational State Transfer) API
+
+wiringPiISR(PIN, INT_EDGE_RISING, edge_rise);
+
+
+$ sudo apt update
+
+$ sudo apt install libffi-dev libbz2-dev liblzma-dev libsqlite3-dev libncurses5-dev libgdbm-dev zlib1g-dev libreadline-dev libssl-dev tk-dev build-essential libncursesw5-dev libc6-dev openssl git
+
+$  wget https://github.com/jjhelmus/berryconda/releases/download/v2.0.0/Berryconda3-2.0.0-Linux-armv7l.sh
+
+  => 파일이 약 390MB로 매우 커서 네트워크 상황이 좋지 않을 경우 보드에서 다운로드 받다가 실패하는 경우가 있음. 이 경우 유선으로 연결된 Windows PC에서 Power Shell을 실행하고 아래 명령을 수행 한 뒤 다운로드 받은 파일을 USB에 옮겨서 보드에 USB를 꼽고 복사하길 바람. 아래에서 '>'는 Windows Power Shell의 prompt를 의미함. 
+     >> wget -Uri https://github.com/jjhelmus/berryconda/releases/download/v2.0.0/Berryconda3-2.0.0-Linux-armv7l.sh -OutFile Berryconda3-2.0.0-Linux-armv7l.sh 
+
+$ chmod +x Berryconda3-2.0.0-Linux-armv7l.sh
+
+$ ./Berryconda3-2.0.0-Linux-armv7l.sh
+
+$ source /home/pi/berryconda3/bin/activate 
+
+   => 터미널을 열 때마다 수행하기 (아니면 .bashrc에 위 행 추가)
+
+   => 위 명령 수행 뒤에는 prompt가 다음과 같이 변함:  (root) pi@raspberrypi:~/berryconda3 $ 
+
+(root) pi@raspberrypi:~/berryconda3 $  python --version                 
+
+   => 3.6.1이 나옴을 확인
+
+(root) pi@raspberrypi:~/berryconda3 $  which pip
+
+   => berryconda3 디렉토리 아래의 것인지 확인 
+
+(root) pi@raspberrypi:~/berryconda3 $  pip install wiringpi
+
+(root) pi@raspberrypi:~/berryconda3 $  pip install --upgrade pip setuptools
+
+(root) pi@raspberrypi:~/berryconda3 $  pip install markupsafe
+
+(root) pi@raspberrypi:~/berryconda3 $  pip install flask
+
+(root) pi@raspberrypi:~/berryconda3 $  pip install greenlet==0.4.17
+
+(root) pi@raspberrypi:~/berryconda3 $  pip install flask-socketio==4.3.2 python-socketio==4.6.1 eventlet==0.30.2
